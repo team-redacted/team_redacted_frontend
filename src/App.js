@@ -5,7 +5,7 @@ import Message from './components/Message';
 
 import './App.css';
 
-const host = 'https://main--redactedclueless.netlify.app/.netlify/functions/server/';
+const host = 'https://clueless-backend.netlify.app/.netlify/functions/server/';
 
 const postMessage = async (user, message) => {
   await fetch(`${host}/messages`, {
