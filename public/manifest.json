@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Clueless",
+  "name": "A fun, family-friendly mystery game.",
   "icons": [
     {
       "src": "favicon.ico",
