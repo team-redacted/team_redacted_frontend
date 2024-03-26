@@ -12,110 +12,119 @@
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
   width: 100%;
   text-align: left;
+  align-items: center;
   background-color: rgb(113, 115, 129);
   color: black;
   font-size: calc(10px + 2vmin);
 }
 
-.content-header {
-  padding: 10px;
+.cards {
   flex: 1;
-  width: 100%;
-}
-
-.messages {
-  padding: 10px;
-  width: 100%;
-  flex: 8;
-  overflow-y: scroll;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space space-between;
+  gap: 10px;
+  height: 25%;
+  align-self: baseline;
+  margin: 10px;
 }
 
-.message {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 10px 10px 10px 0px;
-  width: 40%;
-}
-
-.username {
-  font-size: calc(5px + 2vmin);
-  font-weight: 100;
-  max-width: 90%;
-  font-size: xx-large;
-}
-
-.sender {
-  background-color: rgb(101, 191, 219);
-  align-self: flex-end;
-  border-radius: 10px 10px 0px 10px;
-}
-
-.receiver {
-  background-color: rgb(193, 189, 189);
-  align-self: flex-start;
-}
-
-.delete-button {
-  text-align: right;
-  font-size: calc(1px + 2vmin);
-  color: rgb(78, 78, 78);
-}
-
-.delete-button:hover {
-  cursor: pointer;
-  font-weight: 500;
-  color: black;
-}
-
-.input-area {
-  flex: 2;
-  width: 100%;
-}
-
-.input-content {
+.card {
   display: flex;
-  background-color: white;
-  height: 100%;
-  width: 100%;
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(177, 167, 35);
   font-size: large;
 }
 
-.text-area {
-  flex: 8;
-  resize: none;
-  /* padding-left: 10px; */
-  font-size: xx-large;
+.board {
+  flex: 2;
+  height: 100%;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.submit-button {
-  flex: 1;
-  background-color: rgb(15, 120, 138);
-  border: 3px solid rgb(15, 109, 113);
-  font-size: 100px;
-  color: rgb(187, 220, 222);
-  text-align: center;
+.hallway {
+  display: flex;
+  background-color: rgb(57, 39, 10);
 }
 
-.submit-button:hover {
+.hallway-active{
   cursor: pointer;
-  background-color: rgb(16, 88, 100);
+  background-color: rgb(103, 69, 17);
 }
 
-.App-link {
-  color: #61dafb;
+.hallway-active:hover {
+  background-color: rgb(144, 102, 44);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.horizontal {
+  margin: 20px 0;
+}
+
+.vertical {
+  margin: 0 20px;
+}
+
+.room {
+  display: flex;
+  background-color: rgb(44, 75, 17);
+}
+
+.room-active {
+  background-color: rgb(66, 113, 25);
+  cursor: pointer;
+}
+
+.room-active:hover {
+  background-color: rgb(100, 195, 100);
+}
+
+.player {
+  background-color: white;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.player-red {
+  background-color: red;
+}
+
+.player-blue {
+  background-color: blue;
+}
+
+.player-current {
+  border: solid white 1px;
+}
+
+.actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space space-between;
+  gap: 10px;
+  height: 25%;
+  align-self: baseline;
+  margin: 10px;
+}
+
+.action {
+  background-color: white;
+  width: 75%;
+  padding: 10px;
+}
+
+.action:hover {
+  cursor: pointer;
+  background-color: rgb(223, 216, 183);
 }
